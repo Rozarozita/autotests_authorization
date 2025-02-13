@@ -18,7 +18,7 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // проверила цвет кнопки "восстановить пароль"
 
         cy.get('#mail').type('USER_LOGIN'); // ввела верный логин
-        cy.get('#pass').type('USER_PASSWORD222'); // ввела неверный пароль
+        cy.get('#pass').type('USER_PASSWORD'); // ввела неверный пароль
         cy.get('#loginButton').click(); // нажала войти
 
         cy.get('#messageHeader').contains('Такого логина или пароля нет'); // проверила, что после попытки авторизации вижу текст
